@@ -46,7 +46,7 @@ export const Biography: React.FC = () => {
 
                 <div className="space-y-6 text-lg leading-relaxed text-gray-700">
                   <p>
-                    סמ"ר <strong>רונאל בן משה ז"ל</strong>, בן 20 מתל אביב, היה איש של אנשים, שמחה ונתינה אינסופית.
+                    סמ"ר <strong>רונאל בן משה ז"ל</strong>, בן 20 מרחובות, היה איש של אנשים, שמחה ונתינה אינסופית.
                     רונאל נפל בקרב גבורה ביום כ"ח בסיוון תשפ"ה (24.06.2025).
                   </p>
                   <p>
