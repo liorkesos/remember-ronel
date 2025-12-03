@@ -41,17 +41,6 @@ export const LegacyProjects: React.FC = () => {
                 <span className="font-bold text-rose-500 mx-1">"Ronel Lovely"</span>
                 שנועד לעזור לרווקים ורווקות למצוא את החצי השני שלהם, מתוך אמונה שאהבה היא הכוח החזק ביותר.
               </p>
-              
-              <div className="space-y-4">
-                 <div className="flex items-center gap-3 text-gray-500 text-sm">
-                    <div className="w-2 h-2 rounded-full bg-rose-500"></div>
-                    <span>מאגר שידוכים איכותי ומסונן</span>
-                 </div>
-                 <div className="flex items-center gap-3 text-gray-500 text-sm">
-                    <div className="w-2 h-2 rounded-full bg-rose-500"></div>
-                    <span>ליווי אישי ורגיש</span>
-                 </div>
-              </div>
 
               <a 
                 href="https://ronel-lovely.softr.app/" 
@@ -82,19 +71,11 @@ export const LegacyProjects: React.FC = () => {
             </div>
             <div className="p-8 flex-grow flex flex-col">
               <p className="text-gray-600 mb-6 text-lg leading-relaxed flex-grow">
-                העמותה הוקמה במטרה להנציח את מורשתו ודרכו של רונאל. אנו פועלים לקידום עשייה חברתית, תמיכה בחיילים, סיוע למשפחות נזקקות וקיום אירועי הנצחה וזיכרון.
+                העמותה הוקמה במטרה להנציח את זכרו של החייל רונאל בן משה הי"ד שנפל
+בקרב ב 25.06.24 ,באמצעות פעילויות חינוכיות, ערכיות, חברתיות
+וקהילתיות ותורניות. לרבות הקמת פרויקטים, ימי עיון, תרומות ומיזמים
+נוספים לזכרו.
               </p>
-
-              <div className="space-y-4">
-                 <div className="flex items-center gap-3 text-gray-500 text-sm">
-                    <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-                    <span>הנצחת זכרו ומורשתו</span>
-                 </div>
-                 <div className="flex items-center gap-3 text-gray-500 text-sm">
-                    <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-                    <span>פעילות חברתית ותרומה לקהילה</span>
-                 </div>
-              </div>
 
               <div className="mt-8 flex flex-col gap-3">
                 <a 

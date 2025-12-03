@@ -17,4 +17,5 @@ export enum SectionId {
   GALLERY = 'gallery',
   PROJECTS = 'projects',
   MEMORIES = 'memories',
+  THANK_YOU = 'thank-you',
 }
