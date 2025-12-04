@@ -18,7 +18,6 @@ export const Navbar: React.FC = () => {
     { label: 'ראשי', href: `#${SectionId.HERO}` },
     { label: 'סיפור חייו', href: `#${SectionId.BIO}` },
     { label: 'פרויקטים', href: `#${SectionId.PROJECTS}` },
-    { label: 'תודות', href: `#${SectionId.THANK_YOU}` },
     { label: 'גלריה', href: `#${SectionId.GALLERY}` },
     { label: 'זכרונות', href: `#${SectionId.MEMORIES}` },
   ];

@@ -6,7 +6,6 @@ import { LegacyProjects } from './components/LegacyProjects';
 import { Gallery } from './components/Gallery';
 import { MemoryWall } from './components/MemoryWall';
 import { Footer } from './components/Footer';
-import { ThankYou } from './components/ThankYou';
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
         <Hero />
         <Biography />
         <LegacyProjects />
-        <ThankYou />
         <Gallery />
         <MemoryWall />
       </main>
