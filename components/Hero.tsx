@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
                <div className="relative w-full h-full rounded-[2rem] md:rounded-[3rem] overflow-hidden border-2 border-white/10 shadow-2xl rotate-3 hover:rotate-0 transition duration-700 ease-out">
                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10"></div>
                  <img 
-                  src="https://instagram.ftlv27-1.fna.fbcdn.net/v/t51.82787-15/517122095_17843982498530763_118728614559009033_n.webp?_nc_cat=103&cb=8438d1d6-0aee74db&ig_cache_key=MzY3MTM5NjI1MzU2ODYyNDE3Mw%3D%3D.3-ccb7-5-cb8438d1d6-0aee74db&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzMifQ%3D%3D&_nc_ohc=aj5p1kKa5AUQ7kNvwFjW8a4&_nc_oc=AdkcMEF6pkbXzqQeSHvVGbibwHXpALoIHnYUVh5GbEOzR3nPq7QfI7yTXD6Xcf5drRw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.ftlv27-1.fna&_nc_gid=ku0GBwP7e1vBeuzpCg3Ftw&oh=00_Afloo-eYMqKGvVSD07Pcnn1qCg7g7_frgxWtPlyXajtcBw&oe=69350CE3" 
+                  src="https://lh3.googleusercontent.com/pw/AP1GczNuKrSjYmVc1-pGzS6aq7EABL4FAvilbl4GOW2qy4ZwWkyskNM1O4CnJV3L9KlsvcG1bw1ITTWOCpOc3LjvFOn819v13hRPeekdw8gErnI-3p3jkIawPkmzQriv5X3MmPMb65yqdy1FD6eGkSL_mO3-=w946-h1390-s-no-gm?authuser=0" 
                   alt="רונאל בן משה" 
                   className="w-full h-full object-cover transform scale-105"
                 />
