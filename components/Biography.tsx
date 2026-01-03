@@ -12,7 +12,7 @@ export const Biography: React.FC = () => {
                  <div className="absolute -inset-4 bg-memorial-gold/10 rounded-2xl transform -rotate-2"></div>
                  <div className="absolute -inset-4 bg-memorial-blue/5 rounded-2xl transform rotate-2"></div>
                  <img 
-                   src="https://instagram.ftlv27-1.fna.fbcdn.net/v/t51.82787-15/575621370_17861508804530763_2763954410148751928_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&cb=8438d1d6-0aee74db&ig_cache_key=Mzc1NjM1MDY3Mjk0MjcwODAyMw%3D%3D.3-ccb7-5-cb8438d1d6-0aee74db&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEyMDB4MTYwMC5zZHIuQzMifQ%3D%3D&_nc_ohc=-hiecQ60gm0Q7kNvwGvQx1a&_nc_oc=AdmEBidrGdpS-u6CgsDFZBOghl2VtQWorcXrAUNfnBY4OS5aLgIjzlMY_8HWMSSxvws&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.ftlv27-1.fna&_nc_gid=ku0GBwP7e1vBeuzpCg3Ftw&oh=00_AfmpSpBHDJ1aQhW_EB_acnIiQnDK2bKrKASpSea2snm6GQ&oe=6934E798" 
+                   src="https://lh3.googleusercontent.com/pw/AP1GczMFVPH7B8g6S1tcTouhstP1HE5odxslpaYlreXbt-mTr3hUfTYI5isEdWn_zdJNdhkfVh_4u5gjubD03oUAI6JLRAWuGt3eCCCnCAcSvrGV3Jf6WHcUu4TNcDsqXhx67StWUjb5xYrIsnsPHqSsoxFk5Q=w1134-h1512-s-no-gm?authuser=0" 
                    alt="Ronel Ben Moshe" 
                    className="relative rounded-2xl shadow-2xl w-full h-auto object-cover"
                  />
