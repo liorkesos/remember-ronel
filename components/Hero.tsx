@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
                <div className="relative w-full h-full rounded-[2rem] md:rounded-[3rem] overflow-hidden border-2 border-white/10 shadow-2xl rotate-3 hover:rotate-0 transition duration-700 ease-out">
                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10"></div>
                  <img 
-                  src="https://chaim-beronel.org/images/ronel-profile.webp" 
+                  src="/images/ronel-profile.webp" 
                   alt="רונאל בן משה" 
                   className="w-full h-full object-cover transform scale-105"
                 />
