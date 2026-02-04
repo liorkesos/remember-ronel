@@ -1,7 +1,10 @@
+
 import React from 'react';
 import { Heart } from 'lucide-react';
 
 export const Footer: React.FC = () => {
+  const donationUrl = "https://pay.grow.link/150759c42b410ce5bafdeddd861594f3-MzAxMDczMg";
+
   return (
     <footer className="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
       <div className="container mx-auto px-4 text-center">
@@ -14,6 +17,7 @@ export const Footer: React.FC = () => {
           <a href="https://www.instagram.com/remember_ronel/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Instagram</a>
           <a href="https://www.tiktok.com/@remember_ronel?_r=1&_t=ZS-91v85se8uEH" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">TikTok</a>
           <a href="https://ronel-lovely.softr.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">אתר השידוכים</a>
+          <a href={donationUrl} target="_blank" rel="noopener noreferrer" className="text-memorial-gold hover:text-white transition font-bold">תרומות להנצחה</a>
           <a href="https://www.guidestar.org.il/organization/580827871" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">העמותה לזכרו</a>
         </div>
 

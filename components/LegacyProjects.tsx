@@ -1,8 +1,11 @@
+
 import React from 'react';
 import { SectionId } from '../types';
-import { Heart, Users, ArrowLeft, ExternalLink } from 'lucide-react';
+import { Heart, Users, ArrowLeft, ExternalLink, CreditCard } from 'lucide-react';
 
 export const LegacyProjects: React.FC = () => {
+  const donationUrl = "https://pay.grow.link/150759c42b410ce5bafdeddd861594f3-MzAxMDczMg";
+
   return (
     <section id={SectionId.PROJECTS} className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Decorative Background Elements */}
@@ -23,7 +26,7 @@ export const LegacyProjects: React.FC = () => {
           {/* Matchmaking Project */}
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 group border border-gray-100 flex flex-col">
             <div className="relative h-64 bg-gradient-to-br from-pink-500 via-rose-500 to-red-600 overflow-hidden">
-               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
                <div className="absolute bottom-0 right-0 opacity-20 transform translate-y-1/4 translate-x-1/4">
                  <Heart size={200} className="fill-white" />
                </div>
@@ -57,7 +60,7 @@ export const LegacyProjects: React.FC = () => {
           {/* Amuta Project */}
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 group border border-gray-100 flex flex-col">
             <div className="relative h-64 bg-gradient-to-br from-blue-600 via-indigo-600 to-memorial-blue overflow-hidden">
-               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
                <div className="absolute bottom-0 left-0 opacity-20 transform translate-y-1/4 -translate-x-1/4">
                  <Users size={200} className="fill-white" />
                </div>
@@ -72,20 +75,28 @@ export const LegacyProjects: React.FC = () => {
             <div className="p-8 flex-grow flex flex-col">
               <p className="text-gray-600 mb-6 text-lg leading-relaxed flex-grow">
                 העמותה הוקמה במטרה להנציח את זכרו של החייל רונאל בן משה הי"ד שנפל
-בקרב ב 25.06.24 ,באמצעות פעילויות חינוכיות, ערכיות, חברתיות
-וקהילתיות ותורניות. לרבות הקמת פרויקטים, ימי עיון, תרומות ומיזמים
-נוספים לזכרו.
+בקרב ב 24.06.24, באמצעות פעילויות חינוכיות, ערכיות, חברתיות
+וקהילתיות ותורניות. לרבות הקמת פרויקטים, ימי עיון ותרומות למיזמי הנצחה.
               </p>
 
               <div className="mt-8 flex flex-col gap-3">
                 <a 
+                  href={donationUrl}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 text-white bg-memorial-gold hover:bg-yellow-600 px-8 py-4 rounded-xl font-bold transition shadow-md hover:shadow-lg transform hover:-translate-y-1"
+                >
+                  לתרומה לפעילות העמותה
+                  <CreditCard size={18} />
+                </a>
+                <a 
                   href="https://www.guidestar.org.il/organization/580827871" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 text-memorial-blue bg-blue-50 hover:bg-blue-100 border border-blue-200 px-8 py-4 rounded-xl font-bold transition"
+                  className="inline-flex items-center justify-center gap-2 text-gray-500 hover:text-memorial-blue text-sm transition mt-2"
                 >
                   לפרטי העמותה (גיידסטאר)
-                  <ExternalLink size={18} />
+                  <ExternalLink size={14} />
                 </a>
               </div>
             </div>
