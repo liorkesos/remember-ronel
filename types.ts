@@ -8,7 +8,6 @@ export interface Memory {
   author: string;
   content: string;
   date: string;
-  isAiRefined?: boolean;
 }
 
 export enum SectionId {

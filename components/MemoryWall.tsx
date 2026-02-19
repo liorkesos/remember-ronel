@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { SectionId, Memory } from '../types';
-import { refineMemoryText } from '../services/geminiService';
-import { Send, Sparkles, Loader2 } from 'lucide-react';
+import { Send } from 'lucide-react';
 
 export const MemoryWall: React.FC = () => {
   const [memories, setMemories] = useState<Memory[]>([
@@ -10,29 +9,21 @@ export const MemoryWall: React.FC = () => {
   ]);
   const [newMemory, setNewMemory] = useState('');
   const [author, setAuthor] = useState('');
-  const [isRefining, setIsRefining] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!newMemory.trim() || !author.trim()) return;
-
-    setIsRefining(true);
-    
-    // Use Gemini to check/refine the text (Simulating a server-side process here)
-    const refinedText = await refineMemoryText(newMemory);
     
     const memory: Memory = {
       id: Date.now().toString(),
       author: author,
-      content: refinedText,
+      content: newMemory,
       date: new Date().toISOString().split('T')[0],
-      isAiRefined: refinedText !== newMemory
     };
 
     setMemories([memory, ...memories]);
     setNewMemory('');
     setAuthor('');
-    setIsRefining(false);
   };
 
   return (
@@ -72,25 +63,11 @@ export const MemoryWall: React.FC = () => {
             </div>
             <button
               type="submit"
-              disabled={isRefining}
-              className="w-full bg-memorial-gold hover:bg-yellow-600 text-white font-bold py-3 rounded-lg transition flex items-center justify-center gap-2 disabled:opacity-50"
+              className="w-full bg-memorial-gold hover:bg-yellow-600 text-white font-bold py-3 rounded-lg transition flex items-center justify-center gap-2"
             >
-              {isRefining ? (
-                <>
-                  <Loader2 className="animate-spin" size={20} />
-                  מעבד טקסט...
-                </>
-              ) : (
-                <>
-                  <Send size={20} />
-                  שליחת זכרון
-                </>
-              )}
+              <Send size={20} />
+              שליחת זכרון
             </button>
-            <div className="text-xs text-center text-gray-500 flex items-center justify-center gap-1 mt-2">
-              <Sparkles size={12} />
-              <span>הטקסט נבדק ועובר הגהה קלה באמצעות בינה מלאכותית לשמירה על כבוד המעמד</span>
-            </div>
           </form>
         </div>
 
