@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { SectionId } from '../types';
-import { BookOpen, ExternalLink, Star, Award, Play, X, ExternalLink as OutLink } from 'lucide-react';
+import { BookOpen, ExternalLink, Star, Award, Play, X } from 'lucide-react';
 
 export const Biography: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -202,22 +202,6 @@ export const Biography: React.FC = () => {
                 frameBorder="0"
                 allowFullScreen
               ></iframe>
-              
-              {/* Fallback Overlay (shown briefly or if clicked) */}
-              <div className="absolute inset-0 pointer-events-none bg-transparent flex items-center justify-center">
-                 <div className="hidden group-hover/video:flex flex-col items-center gap-4 bg-black/60 p-6 rounded-2xl backdrop-blur-md border border-white/10 transition-opacity">
-                    <p className="text-white font-medium text-center">הווידאו לא נטען? </p>
-                    <a 
-                      href={directLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="pointer-events-auto bg-memorial-gold text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-yellow-600 transition shadow-lg"
-                    >
-                      פתחו ישירות ב-Google Drive
-                      <OutLink size={18} />
-                    </a>
-                 </div>
-              </div>
             </div>
 
             {/* Footer / Instruction Bar */}
