@@ -1,21 +1,54 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { SectionId } from '../types';
-import { BookOpen, ExternalLink, Shield, Star, Award } from 'lucide-react';
+import { BookOpen, ExternalLink, Star, Award, Play, X } from 'lucide-react';
 
 export const Biography: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Using a representative high-quality portrait for the biography section
+  const bioImage = "https://lh3.googleusercontent.com/pw/AP1GczPLT0t13adW5vlvQtELtJbpPVqFHPOaeVQd8UdMKkOjNqTUibQfslXt_JmZukNW_5Y0Q2B5Xg0E_1PJT8q_uMuY0J_mte3FQN7fEuYuLph-OHG1E5vWe0MwM3B0l08jH0KO4MV38CBz2aDx7mpAbpWd7A=w1502-h1462-s-no-gm?authuser=0";
+
   return (
-    <section id={SectionId.BIO} className="py-24 bg-white">
+    <section id={SectionId.BIO} className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex flex-col md:flex-row gap-12 items-center">
-            {/* Image Side */}
+            {/* Media Side (Image with Play Button) */}
             <div className="w-full md:w-1/2 relative order-2 md:order-1">
                  <div className="absolute -inset-4 bg-memorial-gold/10 rounded-2xl transform -rotate-2"></div>
                  <div className="absolute -inset-4 bg-memorial-blue/5 rounded-2xl transform rotate-2"></div>
-                 <img 
-                   src="https://lh3.googleusercontent.com/pw/AP1GczMFVPH7B8g6S1tcTouhstP1HE5odxslpaYlreXbt-mTr3hUfTYI5isEdWn_zdJNdhkfVh_4u5gjubD03oUAI6JLRAWuGt3eCCCnCAcSvrGV3Jf6WHcUu4TNcDsqXhx67StWUjb5xYrIsnsPHqSsoxFk5Q=w1134-h1512-s-no-gm?authuser=0" 
-                   alt="Ronel Ben Moshe" 
-                   className="relative rounded-2xl shadow-2xl w-full h-auto object-cover"
-                 />
+                 
+                 {/* Image Container with Play Trigger */}
+                 <div 
+                  className="relative rounded-2xl shadow-2xl overflow-hidden bg-gray-200 aspect-[3/4] group cursor-pointer"
+                  onClick={() => setIsModalOpen(true)}
+                >
+                    <img 
+                      src={bioImage} 
+                      alt="רונאל בן משה" 
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    
+                    {/* Dark Overlay on Hover */}
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+
+                    {/* Noticeable Play Button */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="relative">
+                        {/* Pulse Ring */}
+                        <div className="absolute inset-0 bg-white/30 rounded-full animate-ping scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <div className="relative bg-white text-memorial-gold p-6 rounded-full shadow-2xl transform transition-transform duration-500 group-hover:scale-125 flex items-center justify-center">
+                          <Play size={40} className="fill-current ml-1" />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Instruction Text */}
+                    <div className="absolute bottom-6 left-0 right-0 text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="font-bold text-lg drop-shadow-md">לחצו לצפייה בסרטון ההנצחה</p>
+                    </div>
+                 </div>
                  
                  {/* Floating Badge */}
                  <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg border-r-4 border-memorial-gold max-w-xs z-10 hidden md:block">
@@ -26,7 +59,7 @@ export const Biography: React.FC = () => {
                       <span className="font-bold text-lg">גיבור ישראל</span>
                     </div>
                     <p className="text-sm text-gray-600 leading-relaxed">
-                      נפל בקרב גבורה ב-24.6.2025 בעת שהגן על המולדת.
+                      נפל בקרב גבורה ב-24.6.2024 בעת שהגן על המולדת.
                     </p>
                  </div>
             </div>
@@ -47,7 +80,7 @@ export const Biography: React.FC = () => {
                 <div className="space-y-6 text-lg leading-relaxed text-gray-700">
                   <p>
                     סמ"ר <strong>רונאל בן משה ז"ל</strong>, בן 20 מרחובות, היה איש של אנשים, שמחה ונתינה אינסופית.
-                    רונאל נפל בקרב גבורה ביום כ"ח בסיוון תשפ"ה (24.06.2025).
+                    רונאל נפל בקרב גבורה ביום כ"ח בסיוון תשפ"ד (24.06.2024).
                   </p>
                   <p>
                     בכל מקום אליו הגיע, הפיץ אור ואהבה. חבריו מספרים על אדם שתמיד ראה את האחר, שתמיד היה שם כדי להושיט יד, לחייך ולעודד.
@@ -98,6 +131,39 @@ export const Biography: React.FC = () => {
             </div>
         </div>
       </div>
+
+      {/* Video Modal Popup */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-black/90 backdrop-blur-sm transition-opacity duration-300"
+            onClick={() => setIsModalOpen(false)}
+          ></div>
+          
+          {/* Modal Content */}
+          <div className="relative w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300">
+            {/* Close Button */}
+            <button 
+              className="absolute top-4 right-4 z-10 text-white/70 hover:text-white bg-white/10 p-2 rounded-full transition-colors"
+              onClick={() => setIsModalOpen(false)}
+            >
+              <X size={32} />
+            </button>
+
+            {/* Video Iframe */}
+            <div className="relative aspect-video">
+              <iframe 
+                src="https://drive.google.com/file/d/1_CwdPVMy7209KWnl-fACeQImwbOzyAmo/preview?autoplay=1" 
+                className="absolute inset-0 w-full h-full"
+                allow="autoplay; encrypted-media; fullscreen"
+                title="רונאל בן משה - סרטון הנצחה"
+                frameBorder="0"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
