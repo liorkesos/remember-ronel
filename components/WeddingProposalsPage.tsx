@@ -11,8 +11,8 @@ export const WeddingProposalsPage: React.FC = () => {
   }, []);
 
   const images = [
-    "https://drive.google.com/file/d/1frX9fn8jnEX5TxkCpPHYO_zAaENnzpXZ/preview",
-    "https://drive.google.com/file/d/1fOqpp9qsLq8DuHk5PKwPkFJ6w3uOChf6/preview",
+    "https://drive.google.com/file/d/1frX9fn8jnEX5TxkCpPHYO_zAaENnzpXZ/view",
+    "https://drive.google.com/file/d/1fOqpp9qsLq8DuHk5PKwPkFJ6w3uOChf6/view",
     "https://drive.google.com/file/d/1pC_9Cjq4E4ggb-YMyWSIjlGRFC9ZszpX/view",
     "https://drive.google.com/file/d/1tbPP-RWgSvWaHeLr4GMTj2FDMeXmXmHn/view"
   ];
@@ -131,7 +131,7 @@ export const WeddingProposalsPage: React.FC = () => {
                   <h3 className="text-2xl font-bold mb-6">רוצים לתאם הצעת נישואים?</h3>
                   <div className="flex flex-wrap justify-center gap-4">
                     <a 
-                      href="https://wa.me/972500000000" 
+                      href="https://wa.me/972524305252" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-2xl font-bold transition shadow-lg transform hover:-translate-y-1"

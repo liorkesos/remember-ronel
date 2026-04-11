@@ -62,7 +62,7 @@ export const LegacyProjects: React.FC = () => {
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 group border border-gray-100 flex flex-col">
             <div className="relative h-64 overflow-hidden">
                <img 
-                 src="https://storage.googleapis.com/content-storage-ais-dev-o5jnkzi4curnyo6gaboshc-617458502798/images/0.png" 
+                 src="https://drive.google.com/uc?export=view&id=1frX9fn8jnEX5TxkCpPHYO_zAaENnzpXZ" 
                  alt="גמ״ח הצעות נישואים"
                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                  referrerPolicy="no-referrer"
@@ -82,9 +82,9 @@ export const LegacyProjects: React.FC = () => {
               </p>
               
               <div className="grid grid-cols-3 gap-2 mt-4 mb-6">
-                <img src="https://storage.googleapis.com/content-storage-ais-dev-o5jnkzi4curnyo6gaboshc-617458502798/images/1.png" className="rounded-lg h-20 w-full object-cover border border-gray-100" referrerPolicy="no-referrer" alt="תמונה מהגמ״ח" />
-                <img src="https://storage.googleapis.com/content-storage-ais-dev-o5jnkzi4curnyo6gaboshc-617458502798/images/2.png" className="rounded-lg h-20 w-full object-cover border border-gray-100" referrerPolicy="no-referrer" alt="תמונה מהגמ״ח" />
-                <img src="https://storage.googleapis.com/content-storage-ais-dev-o5jnkzi4curnyo6gaboshc-617458502798/images/3.png" className="rounded-lg h-20 w-full object-cover border border-gray-100" referrerPolicy="no-referrer" alt="תמונה מהגמ״ח" />
+                <img src="https://drive.google.com/uc?export=view&id=1fOqpp9qsLq8DuHk5PKwPkFJ6w3uOChf6" className="rounded-lg h-20 w-full object-cover border border-gray-100" referrerPolicy="no-referrer" alt="תמונה מהגמ״ח" />
+                <img src="https://drive.google.com/uc?export=view&id=1pC_9Cjq4E4ggb-YMyWSIjlGRFC9ZszpX" className="rounded-lg h-20 w-full object-cover border border-gray-100" referrerPolicy="no-referrer" alt="תמונה מהגמ״ח" />
+                <img src="https://drive.google.com/uc?export=view&id=1tbPP-RWgSvWaHeLr4GMTj2FDMeXmXmHn" className="rounded-lg h-20 w-full object-cover border border-gray-100" referrerPolicy="no-referrer" alt="תמונה מהגמ״ח" />
               </div>
 
               <Link 
