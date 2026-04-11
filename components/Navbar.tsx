@@ -19,12 +19,12 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { label: 'ראשי', href: isHomePage ? `#${SectionId.HERO}` : `/#/` },
-    { label: 'סיפור חייו', href: isHomePage ? `#${SectionId.BIO}` : `/#/${SectionId.BIO}` },
-    { label: 'פרויקטים', href: isHomePage ? `#${SectionId.PROJECTS}` : `/#/${SectionId.PROJECTS}` },
-    { label: 'תודות', href: isHomePage ? `#${SectionId.THANK_YOU}` : `/#/${SectionId.THANK_YOU}` },
-    { label: 'גלריה', href: isHomePage ? `#${SectionId.GALLERY}` : `/#/${SectionId.GALLERY}` },
-    { label: 'זכרונות', href: isHomePage ? `#${SectionId.MEMORIES}` : `/#/${SectionId.MEMORIES}` },
+    { label: 'ראשי', to: { pathname: '/', hash: `#${SectionId.HERO}` } },
+    { label: 'סיפור חייו', to: { pathname: '/', hash: `#${SectionId.BIO}` } },
+    { label: 'פרויקטים', to: { pathname: '/', hash: `#${SectionId.PROJECTS}` } },
+    { label: 'תודות', to: { pathname: '/', hash: `#${SectionId.THANK_YOU}` } },
+    { label: 'גלריה', to: { pathname: '/', hash: `#${SectionId.GALLERY}` } },
+    { label: 'זכרונות', to: { pathname: '/', hash: `#${SectionId.MEMORIES}` } },
   ];
 
   const donationUrl = "https://pay.grow.link/150759c42b410ce5bafdeddd861594f3-MzAxMDczMg";
@@ -43,13 +43,13 @@ export const Navbar: React.FC = () => {
         <div className="hidden md:flex items-center gap-6">
           <div className="flex gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.to}
                 className={`font-medium text-sm transition-colors duration-300 hover:text-memorial-gold ${isScrolled || !isHomePage ? 'text-gray-600' : 'text-gray-200'}`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
           <a 
@@ -80,14 +80,14 @@ export const Navbar: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden p-4 flex flex-col gap-4 border-t">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
-              href={link.href}
+              to={link.to}
               className="text-gray-800 text-lg py-2 border-b border-gray-100 last:border-0"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <a 
             href={donationUrl}
