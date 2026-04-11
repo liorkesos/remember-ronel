@@ -141,13 +141,13 @@ export const Biography: React.FC = () => {
                        </div>
                     </a>
 
-                    <a href="https://www.ynet.co.il/news/article/s1jbgxfexe" target="_blank" rel="noopener noreferrer" className="group flex items-start gap-3 p-3 rounded-lg hover:bg-white hover:shadow-md transition duration-300">
+                    <a href="https://www.ynet.co.il/gal-hed/article/sy1dsn9d11x" target="_blank" rel="noopener noreferrer" className="group flex items-start gap-3 p-3 rounded-lg hover:bg-white hover:shadow-md transition duration-300">
                        <span className="bg-red-100 text-red-600 p-2 rounded shrink-0 group-hover:bg-red-600 group-hover:text-white transition">
                          <ExternalLink size={18} />
                        </span>
                        <div>
                          <span className="font-bold text-gray-900 block group-hover:text-red-600 transition">Ynet</span>
-                         <span className="text-sm text-gray-600">סיפורו של רונאל בן משה</span>
+                         <span className="text-sm text-gray-600">גל-עד: לזכרו של רונאל בן משה</span>
                        </div>
                     </a>
 

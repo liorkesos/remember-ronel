@@ -1,11 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { SectionId } from '../types';
 import { Menu, X, Heart } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,22 +19,25 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { label: 'ראשי', href: `#${SectionId.HERO}` },
-    { label: 'סיפור חייו', href: `#${SectionId.BIO}` },
-    { label: 'פרויקטים', href: `#${SectionId.PROJECTS}` },
-    { label: 'תודות', href: `#${SectionId.THANK_YOU}` },
-    { label: 'גלריה', href: `#${SectionId.GALLERY}` },
-    { label: 'זכרונות', href: `#${SectionId.MEMORIES}` },
+    { label: 'ראשי', href: isHomePage ? `#${SectionId.HERO}` : `/#${SectionId.HERO}` },
+    { label: 'סיפור חייו', href: isHomePage ? `#${SectionId.BIO}` : `/#${SectionId.BIO}` },
+    { label: 'פרויקטים', href: isHomePage ? `#${SectionId.PROJECTS}` : `/#${SectionId.PROJECTS}` },
+    { label: 'תודות', href: isHomePage ? `#${SectionId.THANK_YOU}` : `/#${SectionId.THANK_YOU}` },
+    { label: 'גלריה', href: isHomePage ? `#${SectionId.GALLERY}` : `/#${SectionId.GALLERY}` },
+    { label: 'זכרונות', href: isHomePage ? `#${SectionId.MEMORIES}` : `/#${SectionId.MEMORIES}` },
   ];
 
   const donationUrl = "https://pay.grow.link/150759c42b410ce5bafdeddd861594f3-MzAxMDczMg";
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || !isHomePage ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className={`font-display font-bold text-xl ${isScrolled ? 'text-memorial-dark' : 'text-white'}`}>
+        <Link 
+          to="/" 
+          className={`font-display font-bold text-xl transition-colors ${isScrolled || !isHomePage ? 'text-memorial-dark' : 'text-white'}`}
+        >
           רונאל בן משה ז"ל
-        </div>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
@@ -40,7 +46,7 @@ export const Navbar: React.FC = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className={`font-medium text-sm transition-colors duration-300 hover:text-memorial-gold ${isScrolled ? 'text-gray-600' : 'text-gray-200'}`}
+                className={`font-medium text-sm transition-colors duration-300 hover:text-memorial-gold ${isScrolled || !isHomePage ? 'text-gray-600' : 'text-gray-200'}`}
               >
                 {link.label}
               </a>
@@ -63,9 +69,9 @@ export const Navbar: React.FC = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
-            <X className={isScrolled ? 'text-black' : 'text-white'} />
+            <X className={isScrolled || !isHomePage ? 'text-black' : 'text-white'} />
           ) : (
-            <Menu className={isScrolled ? 'text-black' : 'text-white'} />
+            <Menu className={isScrolled || !isHomePage ? 'text-black' : 'text-white'} />
           )}
         </button>
       </div>

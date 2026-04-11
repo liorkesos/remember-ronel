@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Biography } from './components/Biography';
@@ -7,10 +8,11 @@ import { Gallery } from './components/Gallery';
 import { MemoryWall } from './components/MemoryWall';
 import { Footer } from './components/Footer';
 import { ThankYou } from './components/ThankYou';
+import { WeddingProposalsPage } from './components/WeddingProposalsPage';
 
-function App() {
+const Home: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 font-sans" dir="rtl">
+    <>
       <Navbar />
       <main>
         <Hero />
@@ -21,7 +23,20 @@ function App() {
         <MemoryWall />
       </main>
       <Footer />
-    </div>
+    </>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen bg-gray-50 font-sans" dir="rtl">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/wedding-proposals" element={<WeddingProposalsPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -22,7 +22,7 @@ export const LegacyProjects: React.FC = () => {
           <div className="w-24 h-1.5 bg-memorial-gold mx-auto mt-8 rounded-full"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {/* Matchmaking Project */}
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 group border border-gray-100 flex flex-col">
             <div className="relative h-64 bg-gradient-to-br from-pink-500 via-rose-500 to-red-600 overflow-hidden">
@@ -52,6 +52,45 @@ export const LegacyProjects: React.FC = () => {
                 className="mt-8 inline-flex items-center justify-center gap-2 text-white bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 px-8 py-4 rounded-xl font-bold transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 לכניסה לאתר השידוכים
+                <ArrowLeft size={20} />
+              </a>
+            </div>
+          </div>
+
+          {/* Proposal Gemach Project */}
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 group border border-gray-100 flex flex-col">
+            <div className="relative h-64 overflow-hidden">
+               <img 
+                 src="https://storage.googleapis.com/content-storage-ais-dev-o5jnkzi4curnyo6gaboshc-617458502798/images/0.png" 
+                 alt="גמ״ח הצעות נישואים"
+                 className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                 referrerPolicy="no-referrer"
+               />
+               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition duration-500"></div>
+               <div className="absolute inset-0 flex items-center justify-center flex-col text-white p-6 text-center">
+                  <div className="bg-white/20 p-4 rounded-full backdrop-blur-sm mb-4 group-hover:scale-110 transition duration-500">
+                    <Heart className="w-12 h-12 fill-white" />
+                  </div>
+                  <h3 className="text-3xl font-bold shadow-sm">גמ״ח הצעות נישואים</h3>
+                  <p className="text-white/90 mt-2 font-medium">יוצרים רגעים של פעם בחיים</p>
+               </div>
+            </div>
+            <div className="p-8 flex-grow flex flex-col">
+              <p className="text-gray-600 mb-6 text-lg leading-relaxed flex-grow">
+                במסגרת הפרויקט אנו מספקים לזוגות שרוצים להתחתן את כל האמצעים לרגע המרגש של הצעת הנישואים. מהציוד ועד העיצוב, הכל כדי שהרגע יהיה מושלם ומלא באהבה.
+              </p>
+              
+              <div className="grid grid-cols-3 gap-2 mt-4 mb-6">
+                <img src="https://storage.googleapis.com/content-storage-ais-dev-o5jnkzi4curnyo6gaboshc-617458502798/images/1.png" className="rounded-lg h-20 w-full object-cover border border-gray-100" referrerPolicy="no-referrer" alt="תמונה מהגמ״ח" />
+                <img src="https://storage.googleapis.com/content-storage-ais-dev-o5jnkzi4curnyo6gaboshc-617458502798/images/2.png" className="rounded-lg h-20 w-full object-cover border border-gray-100" referrerPolicy="no-referrer" alt="תמונה מהגמ״ח" />
+                <img src="https://storage.googleapis.com/content-storage-ais-dev-o5jnkzi4curnyo6gaboshc-617458502798/images/3.png" className="rounded-lg h-20 w-full object-cover border border-gray-100" referrerPolicy="no-referrer" alt="תמונה מהגמ״ח" />
+              </div>
+
+              <a 
+                href="/wedding-proposals" 
+                className="mt-auto inline-flex items-center justify-center gap-2 text-white bg-gray-900 hover:bg-black px-8 py-4 rounded-xl font-bold transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                לפרטים נוספים ותיאום
                 <ArrowLeft size={20} />
               </a>
             </div>
