@@ -2,6 +2,7 @@
 import React from 'react';
 import { SectionId } from '../types';
 import { Heart, Users, ArrowLeft, ExternalLink, CreditCard } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const LegacyProjects: React.FC = () => {
   const donationUrl = "https://pay.grow.link/150759c42b410ce5bafdeddd861594f3-MzAxMDczMg";
@@ -86,13 +87,13 @@ export const LegacyProjects: React.FC = () => {
                 <img src="https://storage.googleapis.com/content-storage-ais-dev-o5jnkzi4curnyo6gaboshc-617458502798/images/3.png" className="rounded-lg h-20 w-full object-cover border border-gray-100" referrerPolicy="no-referrer" alt="תמונה מהגמ״ח" />
               </div>
 
-              <a 
-                href="/wedding-proposals" 
+              <Link 
+                to="/wedding-proposals" 
                 className="mt-auto inline-flex items-center justify-center gap-2 text-white bg-gray-900 hover:bg-black px-8 py-4 rounded-xl font-bold transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 לפרטים נוספים ותיאום
                 <ArrowLeft size={20} />
-              </a>
+              </Link>
             </div>
           </div>
 

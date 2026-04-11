@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { Heart, ArrowRight, Phone, MessageCircle, Calendar, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const WeddingProposalsPage: React.FC = () => {
   useEffect(() => {
@@ -156,13 +157,13 @@ export const WeddingProposalsPage: React.FC = () => {
         <section className="py-20 bg-white text-center">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-display font-bold mb-8">רוצים להכיר את רונאל?</h2>
-            <a 
-              href="/" 
+            <Link 
+              to="/" 
               className="inline-flex items-center gap-2 text-memorial-blue hover:text-blue-700 font-bold text-lg group"
             >
               <ArrowRight size={20} className="group-hover:translate-x-1 transition" />
               חזרה לאתר ההנצחה הראשי
-            </a>
+            </Link>
           </div>
         </section>
       </main>

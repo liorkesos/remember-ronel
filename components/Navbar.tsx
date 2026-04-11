@@ -19,12 +19,12 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { label: 'ראשי', href: isHomePage ? `#${SectionId.HERO}` : `/#${SectionId.HERO}` },
-    { label: 'סיפור חייו', href: isHomePage ? `#${SectionId.BIO}` : `/#${SectionId.BIO}` },
-    { label: 'פרויקטים', href: isHomePage ? `#${SectionId.PROJECTS}` : `/#${SectionId.PROJECTS}` },
-    { label: 'תודות', href: isHomePage ? `#${SectionId.THANK_YOU}` : `/#${SectionId.THANK_YOU}` },
-    { label: 'גלריה', href: isHomePage ? `#${SectionId.GALLERY}` : `/#${SectionId.GALLERY}` },
-    { label: 'זכרונות', href: isHomePage ? `#${SectionId.MEMORIES}` : `/#${SectionId.MEMORIES}` },
+    { label: 'ראשי', href: isHomePage ? `#${SectionId.HERO}` : `/#/` },
+    { label: 'סיפור חייו', href: isHomePage ? `#${SectionId.BIO}` : `/#/${SectionId.BIO}` },
+    { label: 'פרויקטים', href: isHomePage ? `#${SectionId.PROJECTS}` : `/#/${SectionId.PROJECTS}` },
+    { label: 'תודות', href: isHomePage ? `#${SectionId.THANK_YOU}` : `/#/${SectionId.THANK_YOU}` },
+    { label: 'גלריה', href: isHomePage ? `#${SectionId.GALLERY}` : `/#/${SectionId.GALLERY}` },
+    { label: 'זכרונות', href: isHomePage ? `#${SectionId.MEMORIES}` : `/#/${SectionId.MEMORIES}` },
   ];
 
   const donationUrl = "https://pay.grow.link/150759c42b410ce5bafdeddd861594f3-MzAxMDczMg";
