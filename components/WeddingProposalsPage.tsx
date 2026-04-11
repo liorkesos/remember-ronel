@@ -11,10 +11,10 @@ export const WeddingProposalsPage: React.FC = () => {
   }, []);
 
   const images = [
-    "https://storage.googleapis.com/content-storage-ais-dev-o5jnkzi4curnyo6gaboshc-617458502798/images/0.png",
-    "https://storage.googleapis.com/content-storage-ais-dev-o5jnkzi4curnyo6gaboshc-617458502798/images/1.png",
-    "https://storage.googleapis.com/content-storage-ais-dev-o5jnkzi4curnyo6gaboshc-617458502798/images/2.png",
-    "https://storage.googleapis.com/content-storage-ais-dev-o5jnkzi4curnyo6gaboshc-617458502798/images/3.png"
+    "https://drive.google.com/file/d/1frX9fn8jnEX5TxkCpPHYO_zAaENnzpXZ/preview",
+    "https://drive.google.com/file/d/1fOqpp9qsLq8DuHk5PKwPkFJ6w3uOChf6/preview",
+    "https://drive.google.com/file/d/1pC_9Cjq4E4ggb-YMyWSIjlGRFC9ZszpX/view",
+    "https://drive.google.com/file/d/1tbPP-RWgSvWaHeLr4GMTj2FDMeXmXmHn/view"
   ];
 
   return (
