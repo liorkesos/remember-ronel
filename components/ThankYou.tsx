@@ -13,7 +13,7 @@ export const ThankYou: React.FC = () => {
            {/* Image Section */}
            <div className="w-full md:w-1/2 relative min-h-[500px] md:min-h-auto bg-gray-100 order-1 md:order-2">
               <img
-                src="https://lh3.googleusercontent.com/pw/AP1GczMuJJJy9PKcig8nPs7e7rPHV0ERYLw_J_xUi6wG4tLIZtDl5Pcjvv5ZuwY-RfG0-jIii_NVAXVU0LV3gxbKQTyqMQptZM16_GGldmroFBRCqr1bZ2GHkKZHqYWU2rX-GbYZ0K_FaybamY2owGFKnP7G4A=w721-h961-s-no-gm?authuser=0" 
+                src="https://drive.google.com/thumbnail?id=1Bk7rc-bXN-aa2EpASnY6T3UHuO0rPW7w&sz=w1200" 
                 alt="רונאל מחזיק ספר תורה"
                 className="absolute inset-0 w-full h-full object-cover object-top"
               />
