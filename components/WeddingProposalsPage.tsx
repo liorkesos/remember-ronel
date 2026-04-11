@@ -10,33 +10,33 @@ export const WeddingProposalsPage: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
+ 
   const images = [
-    "https://drive.usercontent.google.com/download?id=1frX9fn8jnEX5TxkCpPHYO_zAaENnzpXZ",
-    "https://drive.usercontent.google.com/download?id=1fOqpp9qsLq8DuHk5PKwPkFJ6w3uOChf6",
-    "https://drive.usercontent.google.com/download?id=1pC_9Cjq4E4ggb-YMyWSIjlGRFC9ZszpX",
-    "https://drive.usercontent.google.com/download?id=1tbPP-RWgSvWaHeLr4GMTj2FDMeXmXmHn"
+    "https://drive.google.com/thumbnail?id=1tbPP-RWgSvWaHeLr4GMTj2FDMeXmXmHn&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1fOqpp9qsLq8DuHk5PKwPkFJ6w3uOChf6&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1pC_9Cjq4E4ggb-YMyWSIjlGRFC9ZszpX&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1frX9fn8jnEX5TxkCpPHYO_zAaENnzpXZ&sz=w400"
   ];
-
   return (
     <div className="min-h-screen bg-white font-sans" dir="rtl">
       <Navbar />
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-b from-rose-50 to-white overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-rose-200/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <section className="relative py-20 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-100 text-rose-600 font-bold text-sm mb-6 animate-bounce">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-600 font-bold text-sm mb-6 animate-bounce">
                 <Heart size={16} className="fill-current" />
                 <span>מיזם של אהבה ונתינה</span>
               </div>
               <h1 className="text-5xl md:text-6xl font-display font-black text-gray-900 mb-6 leading-tight">
                 גמ״ח הצעות נישואים <br />
-                <span className="text-rose-500">לזכרו של רונאל בן משה</span>
+                <span className="text-memorial-blue">לזכרו של רונאל בן משה</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl mx-auto">
-                אנו כאן כדי לעזור לכם להפוך את הרגע המרגש ביותר בחיים למושלם, ללא עלות, מתוך רצון להמשיך את דרכו של רונאל שאהב לחבר בין לבבות.
+                רונאל אהב לחבר בין לבבות ולהפיץ אור בכל מקום. לזכרו, הקמנו את הגמ״ח כדי להעניק לכם רגע קסום של פעם בחיים. אנחנו כאן כדי לעזור לכם להפוך את הצעת הנישואים שלכם למושלמת, עוטפת ומלאה באהבה - בדיוק כפי שרונאל היה עושה.
               </p>
             </div>
           </div>
@@ -87,8 +87,8 @@ export const WeddingProposalsPage: React.FC = () => {
                 <div className="grid md:grid-cols-2 gap-10">
                   <div className="space-y-6">
                     <div className="flex gap-4">
-                      <div className="w-12 h-12 bg-rose-50 rounded-2xl flex items-center justify-center shrink-0">
-                        <Heart className="text-rose-500" />
+                      <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
+                        <Heart className="text-memorial-blue" />
                       </div>
                       <div>
                         <h3 className="font-bold text-lg mb-1">ציוד הפקה מלא</h3>
@@ -96,8 +96,8 @@ export const WeddingProposalsPage: React.FC = () => {
                       </div>
                     </div>
                     <div className="flex gap-4">
-                      <div className="w-12 h-12 bg-rose-50 rounded-2xl flex items-center justify-center shrink-0">
-                        <Calendar className="text-rose-500" />
+                      <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
+                        <Calendar className="text-memorial-blue" />
                       </div>
                       <div>
                         <h3 className="font-bold text-lg mb-1">תאורה ואווירה</h3>
@@ -107,8 +107,8 @@ export const WeddingProposalsPage: React.FC = () => {
                   </div>
                   <div className="space-y-6">
                     <div className="flex gap-4">
-                      <div className="w-12 h-12 bg-rose-50 rounded-2xl flex items-center justify-center shrink-0">
-                        <MapPin className="text-rose-500" />
+                      <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
+                        <MapPin className="text-memorial-blue" />
                       </div>
                       <div>
                         <h3 className="font-bold text-lg mb-1">ליווי וייעוץ</h3>
@@ -116,8 +116,8 @@ export const WeddingProposalsPage: React.FC = () => {
                       </div>
                     </div>
                     <div className="flex gap-4">
-                      <div className="w-12 h-12 bg-rose-50 rounded-2xl flex items-center justify-center shrink-0">
-                        <MessageCircle className="text-rose-500" />
+                      <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
+                        <MessageCircle className="text-memorial-blue" />
                       </div>
                       <div>
                         <h3 className="font-bold text-lg mb-1">הכל בחינם</h3>
@@ -131,7 +131,7 @@ export const WeddingProposalsPage: React.FC = () => {
                   <h3 className="text-2xl font-bold mb-6">רוצים לתאם הצעת נישואים?</h3>
                   <div className="flex flex-wrap justify-center gap-4">
                     <a 
-                      href="https://wa.me/972524305252" 
+                      href="https://wa.me/972523283573" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-2xl font-bold transition shadow-lg transform hover:-translate-y-1"

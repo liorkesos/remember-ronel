@@ -78,15 +78,8 @@ export const LegacyProjects: React.FC = () => {
             </div>
             <div className="p-8 flex-grow flex flex-col">
               <p className="text-gray-600 mb-6 text-lg leading-relaxed flex-grow">
-                במסגרת הפרויקט אנו מספקים לזוגות שרוצים להתחתן את כל האמצעים לרגע המרגש של הצעת הנישואים. מהציוד ועד העיצוב, הכל כדי שהרגע יהיה מושלם ומלא באהבה.
+                רונאל תמיד האמין בכוחה של אהבה לחבר בין עולמות. לזכרו, הקמנו גמ״ח המעניק לכם את כל הציוד והתפאורה לרגע המרגש בחייכם - הצעת הנישואים. אנחנו כאן כדי לדאוג שהרגע שלכם יהיה קסום, עוטף ומלא באור, בדיוק כפי שרונאל היה.
               </p>
-              
-              <div className="grid grid-cols-3 gap-2 mt-4 mb-6">
-                <img src="https://drive.google.com/uc?export=view&id=1fOqpp9qsLq8DuHk5PKwPkFJ6w3uOChf6" className="rounded-lg h-20 w-full object-cover border border-gray-100" referrerPolicy="no-referrer" alt="תמונה מהגמ״ח" />
-                <img src="https://drive.google.com/uc?export=view&id=1pC_9Cjq4E4ggb-YMyWSIjlGRFC9ZszpX" className="rounded-lg h-20 w-full object-cover border border-gray-100" referrerPolicy="no-referrer" alt="תמונה מהגמ״ח" />
-                <img src="https://drive.google.com/uc?export=view&id=1tbPP-RWgSvWaHeLr4GMTj2FDMeXmXmHn" className="rounded-lg h-20 w-full object-cover border border-gray-100" referrerPolicy="no-referrer" alt="תמונה מהגמ״ח" />
-              </div>
-
               <Link 
                 to="/wedding-proposals" 
                 className="mt-auto inline-flex items-center justify-center gap-2 text-white bg-gray-900 hover:bg-black px-8 py-4 rounded-xl font-bold transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
