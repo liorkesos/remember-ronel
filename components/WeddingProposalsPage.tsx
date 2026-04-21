@@ -84,45 +84,34 @@ export const WeddingProposalsPage: React.FC = () => {
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-[40px] p-8 md:p-16 shadow-xl border border-gray-100">
                 <h2 className="text-3xl font-display font-bold text-gray-900 mb-8 text-center">מה אנחנו מספקים?</h2>
-                <div className="grid md:grid-cols-2 gap-10">
-                  <div className="space-y-6">
-                    <div className="flex gap-4">
-                      <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
-                        <Heart className="text-memorial-blue" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-lg mb-1">ציוד הפקה מלא</h3>
-                        <p className="text-gray-600">שטיחים, כיסאות, שולחנות וכל מה שצריך כדי ליצור את התפאורה המושלמת.</p>
-                      </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="flex flex-col items-center text-center gap-4">
+                    <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
+                      <Heart className="text-memorial-blue w-8 h-8" />
                     </div>
-                    <div className="flex gap-4">
-                      <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
-                        <Calendar className="text-memorial-blue" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-lg mb-1">תאורה ואווירה</h3>
-                        <p className="text-gray-600">נרות, גרילנדות ואלמנטים עיצוביים שיוצרים רגע קסום ובלתי נשכח.</p>
-                      </div>
+                    <div>
+                      <h3 className="font-bold text-xl mb-2">ריהוט</h3>
+                      <p className="text-gray-600 leading-relaxed">שטיח גדול, מעמד מדפים מעץ, כיסאות, שולחן וכל מה שצריך כדי ליצור את התפאורה המושלמת.</p>
                     </div>
                   </div>
-                  <div className="space-y-6">
-                    <div className="flex gap-4">
-                      <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
-                        <MapPin className="text-memorial-blue" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-lg mb-1">ליווי וייעוץ</h3>
-                        <p className="text-gray-600">אנחנו כאן כדי לעזור לכם לתכנן את הרגע, לבחור מיקום ולדאוג שהכל יתקתק.</p>
-                      </div>
+
+                  <div className="flex flex-col items-center text-center gap-4">
+                    <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
+                      <Calendar className="text-memorial-blue w-8 h-8" />
                     </div>
-                    <div className="flex gap-4">
-                      <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
-                        <MessageCircle className="text-memorial-blue" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-lg mb-1">הכל בחינם</h3>
-                        <p className="text-gray-600">השירות ניתן כגמ״ח מלא, ללא כל עלות, לזכרו של רונאל האהוב שלנו.</p>
-                      </div>
+                    <div>
+                      <h3 className="font-bold text-xl mb-2">תאורה ואווירה</h3>
+                      <p className="text-gray-600 leading-relaxed">נרות, כוסות יין, עציץ, מפה, מסגרות לתמונות, גרילנדות ואלמנטים עיצוביים שיוצרים רגע קסום ובלתי נשכח.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col items-center text-center gap-4">
+                    <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
+                      <MessageCircle className="text-memorial-blue w-8 h-8" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-xl mb-2">הכל בחינם</h3>
+                      <p className="text-gray-600 leading-relaxed">השירות ניתן כגמ״ח מלא, ללא כל עלות, לזכרו של רונאל האהוב שלנו.</p>
                     </div>
                   </div>
                 </div>
@@ -139,13 +128,16 @@ export const WeddingProposalsPage: React.FC = () => {
                       <MessageCircle size={20} />
                       דברו איתנו בוואטסאפ
                     </a>
-                    <button className="inline-flex items-center gap-2 bg-gray-900 hover:bg-black text-white px-8 py-4 rounded-2xl font-bold transition shadow-lg transform hover:-translate-y-1">
+                    <a 
+                      href="tel:0523283573" 
+                      className="inline-flex items-center gap-2 bg-gray-900 hover:bg-black text-white px-8 py-4 rounded-2xl font-bold transition shadow-lg transform hover:-translate-y-1"
+                    >
                       <Phone size={20} />
-                      התקשרו לפרטים
-                    </button>
+                      טלפון 052-3283573
+                    </a>
                   </div>
                   <p className="mt-6 text-gray-500 text-sm italic">
-                    * מומלץ ליצור קשר לפחות שבועיים מראש כדי להבטיח זמינות של הציוד.
+                    * מומלץ ליצור קשר לפחות שבוע מראש כדי להבטיח זמינות של הציוד. איסוף מנס ציונה.
                   </p>
                 </div>
               </div>

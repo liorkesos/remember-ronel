@@ -61,13 +61,7 @@ export const LegacyProjects: React.FC = () => {
           {/* Proposal Gemach Project */}
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 group border border-gray-100 flex flex-col">
             <div className="relative h-64 overflow-hidden">
-               <img 
-                 src="https://drive.google.com/uc?export=view&id=1frX9fn8jnEX5TxkCpPHYO_zAaENnzpXZ" 
-                 alt="גמ״ח הצעות נישואים"
-                 className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-                 referrerPolicy="no-referrer"
-               />
-               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition duration-500"></div>
+               <div className="absolute inset-0 bg-memorial-gold/60 group-hover:bg-memorial-gold/40 transition duration-500"></div>
                <div className="absolute inset-0 flex items-center justify-center flex-col text-white p-6 text-center">
                   <div className="bg-white/20 p-4 rounded-full backdrop-blur-sm mb-4 group-hover:scale-110 transition duration-500">
                     <Heart className="w-12 h-12 fill-white" />
