@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Biography } from './components/Biography';
@@ -47,15 +48,17 @@ const Home: React.FC = () => {
 
 function App() {
   return (
-    <Router>
-      <ScrollToHash />
-      <div className="min-h-screen bg-gray-50 font-sans" dir="rtl">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/wedding-proposals" element={<WeddingProposalsPage />} />
-        </Routes>
-      </div>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <ScrollToHash />
+        <div className="min-h-screen bg-gray-50 font-sans" dir="rtl">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/wedding-proposals" element={<WeddingProposalsPage />} />
+          </Routes>
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 

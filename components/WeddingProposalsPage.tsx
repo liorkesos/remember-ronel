@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { Heart, ArrowRight, Phone, MessageCircle, Calendar, MapPin } from 'lucide-react';
@@ -19,6 +20,38 @@ export const WeddingProposalsPage: React.FC = () => {
   ];
   return (
     <div className="min-h-screen bg-white font-sans" dir="rtl">
+      <Helmet>
+        <title>גמ״ח הצעות נישואים לזכרו של רונאל בן משה | ציוד להצעת נישואין בחינם</title>
+        <meta name="description" content="זקוקים לציוד להצעת נישואין? גמ״ח הצעות נישואים לזכרו של רונאל בן משה מציע ריהוט, תאורה ואווירה מדהימה להצעת נישואין מושלמת בחינם. איסוף מנס ציונה." />
+        <meta name="keywords" content="גמ״ח הצעת נישואין, ציוד להצעת נישואין, הצעת נישואין בחינם, גמח הצעות נישואים, רונאל בן משה, השכרת ציוד להצעת נישואין" />
+        <link rel="canonical" href="https://remember-ronel.com/wedding-proposals" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="גמ״ח הצעות נישואים לזכרו של רונאל בן משה" />
+        <meta property="og:description" content="ציוד מלא, עיצוב ואווירה להצעת נישואין מושלמת. הכל בחינם לזכרו של רונאל בן משה. איסוף מנס ציונה." />
+        <meta property="og:image" content={images[0]} />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "גמ״ח הצעות נישואים לזכרו של רונאל בן משה",
+            "description": "השאלת ציוד ועיצוב להצעות נישואים בחינם לזכר רונאל בן משה.",
+            "provider": {
+              "@type": "Organization",
+              "name": "עמותת רונאל בן משה"
+            },
+            "areaServed": "Israel",
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://remember-ronel.com/wedding-proposals",
+              "servicePhone": "0523283573"
+            }
+          })}
+        </script>
+      </Helmet>
       <Navbar />
       
       <main className="pt-20">
