@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Biography } from './components/Biography';
@@ -32,6 +32,18 @@ const ScrollToHash: React.FC = () => {
 const Home: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>לזכרו של רונאל בן משה | אתר הנצחה ופעילות חברתית</title>
+        <meta name="description" content="אתר הנצחה המוקדש לזכרו של רונאל בן משה הי״ד. כאן תוכלו להכיר את חייו, דרכו והפרויקטים שהוקמו לזכרו - חיים ברונאל, גמ״ח הצעות נישואים ועוד." />
+        <meta name="keywords" content="רונאל בן משה, חיים ברונאל, דף הנצחה רונאל בן משה, הנצחת חללי צהל, גמח הצעות נישואים, פרויקטים חברתיים" />
+        <link rel="canonical" href="https://remember-ronel.com/" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="לזכרו של רונאל בן משה | אתר הנצחה" />
+        <meta property="og:description" content="מנציחים את האור והחיוך של רונאל דרך עשייה ונתינה. מוזמנים להכיר את המורשת שהשאיר אחריו." />
+        <meta property="og:image" content="https://drive.google.com/thumbnail?id=1Bk7rc-bXN-aa2EpASnY6T3UHuO0rPW7w&sz=w1200" />
+      </Helmet>
       <Navbar />
       <main>
         <Hero />
