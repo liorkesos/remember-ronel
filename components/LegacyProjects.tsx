@@ -47,7 +47,7 @@ export const LegacyProjects: React.FC = () => {
               </p>
 
               <a 
-                href="https://ronel-lovely.softr.app/" 
+                href="https://www.ronel-lovely.com/login" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center justify-center gap-2 text-white bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 px-8 py-4 rounded-xl font-bold transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"

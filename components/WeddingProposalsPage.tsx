@@ -1,10 +1,11 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
-import { Heart, ArrowRight, Phone, MessageCircle, Calendar, MapPin } from 'lucide-react';
+import { Heart, ArrowRight, Phone, MessageCircle, Calendar, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import proposalDeckSetup from '../src/assets/images/proposal_deck_setup_1781986333955.jpg';
 
 export const WeddingProposalsPage: React.FC = () => {
   useEffect(() => {
@@ -12,11 +13,39 @@ export const WeddingProposalsPage: React.FC = () => {
   }, []);
 
  
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 400;
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const images = [
-    "https://drive.google.com/thumbnail?id=1tbPP-RWgSvWaHeLr4GMTj2FDMeXmXmHn&sz=w1200",
-    "https://drive.google.com/thumbnail?id=1fOqpp9qsLq8DuHk5PKwPkFJ6w3uOChf6&sz=w1200",
-    "https://drive.google.com/thumbnail?id=1pC_9Cjq4E4ggb-YMyWSIjlGRFC9ZszpX&sz=w1200",
-    "https://drive.google.com/thumbnail?id=1frX9fn8jnEX5TxkCpPHYO_zAaENnzpXZ&sz=w400"
+    {
+      src: "https://drive.google.com/thumbnail?id=1tbPP-RWgSvWaHeLr4GMTj2FDMeXmXmHn&sz=w1200",
+      alt: "שטיח לבן, מסגרת עץ דקורטיבית, שולחן וכיסאות מעץ"
+    },
+    {
+      src: "https://drive.google.com/thumbnail?id=1fOqpp9qsLq8DuHk5PKwPkFJ6w3uOChf6&sz=w1200",
+      alt: "לב דקורטיבי מעץ עם קישוטים רומנטיים"
+    },
+    {
+      src: "https://drive.google.com/thumbnail?id=1pC_9Cjq4E4ggb-YMyWSIjlGRFC9ZszpX&sz=w1200",
+      alt: "אלמנטים דקורטיביים לעיצוב הצעת נישואין מושלמת"
+    },
+    {
+      src: "https://drive.google.com/thumbnail?id=1frX9fn8jnEX5TxkCpPHYO_zAaENnzpXZ&sz=w400",
+      alt: "גמ״ח הצעות נישואים בהקמה"
+    },
+    {
+      src: proposalDeckSetup,
+      alt: "הצעת נישואין רומנטית במרפסת מול נוף כרמים פתוח"
+    }
   ];
   return (
     <div className="min-h-screen bg-white font-sans" dir="rtl">
@@ -30,7 +59,7 @@ export const WeddingProposalsPage: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="גמ״ח הצעות נישואים לזכרו של רונאל בן משה" />
         <meta property="og:description" content="ציוד מלא, עיצוב ואווירה להצעת נישואין מושלמת. הכל בחינם לזכרו של רונאל בן משה. איסוף מנס ציונה." />
-        <meta property="og:image" content={images[0]} />
+        <meta property="og:image" content={images[0].src} />
 
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -75,38 +104,66 @@ export const WeddingProposalsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Gallery Section */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-              <div className="space-y-6">
-                <img 
-                  src={images[0]} 
-                  alt="עיצוב הצעת נישואים" 
-                  className="w-full h-[400px] object-cover rounded-3xl shadow-2xl hover:scale-[1.02] transition duration-500"
-                  referrerPolicy="no-referrer"
-                />
-                <img 
-                  src={images[2]} 
-                  alt="פרטים קטנים של אהבה" 
-                  className="w-full h-[300px] object-cover rounded-3xl shadow-xl hover:scale-[1.02] transition duration-500"
-                  referrerPolicy="no-referrer"
-                />
+        {/* Gallery Section with Premium Horizontal Scroll */}
+        <section className="py-12 bg-white relative">
+          <div className="container mx-auto px-4 relative max-w-6xl">
+            <h2 className="text-3xl font-display font-bold text-gray-900 mb-8 text-center md:text-right">
+              גלריית תמונות מהציוד וההפקות שלנו
+            </h2>
+            
+            <div className="relative group/gallery">
+              {/* Desktop Slider Buttons (RTL adjusted) */}
+              <button 
+                onClick={() => scroll('left')}
+                className="absolute top-1/2 -translate-y-1/2 -left-4 z-20 w-12 h-12 rounded-full bg-white/90 hover:bg-white text-gray-800 border border-gray-100 flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition pointer-events-auto cursor-pointer opacity-0 group-hover/gallery:opacity-100 hidden md:flex"
+                title="הבא"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+
+              <button 
+                onClick={() => scroll('right')}
+                className="absolute top-1/2 -translate-y-1/2 -right-4 z-20 w-12 h-12 rounded-full bg-white/90 hover:bg-white text-gray-800 border border-gray-100 flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition pointer-events-auto cursor-pointer opacity-0 group-hover/gallery:opacity-100 hidden md:flex"
+                title="הקודם"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+
+              {/* Horizontal Scrollable Row containing images with consistent vertical heights */}
+              <div 
+                ref={scrollRef}
+                className="flex overflow-x-auto gap-6 pb-6 pt-2 snap-x snap-mandatory flex-row max-w-full"
+                style={{ 
+                  scrollbarWidth: 'none', 
+                  msOverflowStyle: 'none',
+                  WebkitOverflowScrolling: 'touch' 
+                }}
+              >
+                {images.map((img, idx) => (
+                  <div 
+                    key={idx}
+                    className="snap-start shrink-0 w-[280px] sm:w-[450px] h-[400px] relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 group/item hover:-translate-y-2"
+                  >
+                    <img 
+                      src={img.src} 
+                      alt={img.alt} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-105"
+                      referrerPolicy="no-referrer"
+                    />
+                    {/* Caption Overlay */}
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 flex flex-col justify-end text-right h-1/2 opacity-90 sm:opacity-0 group-hover/item:opacity-100 transition-opacity duration-300">
+                      <p className="text-white font-bold text-lg leading-snug drop-shadow-md">
+                        {img.alt}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="space-y-6 md:pt-12">
-                <img 
-                  src={images[1]} 
-                  alt="לב מעץ בעיצוב" 
-                  className="w-full h-[300px] object-cover rounded-3xl shadow-xl hover:scale-[1.02] transition duration-500"
-                  referrerPolicy="no-referrer"
-                />
-                <img 
-                  src={images[3]} 
-                  alt="הפקה מלאה" 
-                  className="w-full h-[400px] object-cover rounded-3xl shadow-2xl hover:scale-[1.02] transition duration-500"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+            </div>
+
+            {/* Hint for touch-swipe devices */}
+            <div className="flex justify-center items-center gap-2 mt-4 text-sm text-gray-400">
+              <span className="animate-pulse">← החליקו או גוללו אופקית לצפייה בגלריה המלאה →</span>
             </div>
           </div>
         </section>
